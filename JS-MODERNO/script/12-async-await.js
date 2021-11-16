@@ -37,11 +37,9 @@ async function getMisProductos(){
     try{
         console.log("Cargando Información...");
         let informacion = await Promise.all([conseguirProductos(), conseguirNombre()]);
-        let mis_productos = await conseguirProductos();
-        let mi_nombre = await conseguirNombre();
         console.log(informacion[0], informacion[1]);
     } catch(error){
-        console.log(error.message);
+        console.log(error);
     }
 }
 
